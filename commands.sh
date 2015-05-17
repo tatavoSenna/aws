@@ -38,3 +38,35 @@ aws ec2 run-instances \
   	--filters "Name=key-name,Values=tatavo_senna_sao_paulo" \
   	 --query "Reservations[*].Instances[*].[InstanceId]" \
   	 --output text
+
+# CREATE AN DB INSTANCE ===========================================================================
+aws rds create-db-instance \
+  --db-name apliquei \
+  --db-instance-identifier rds-apliquei \
+  --allocated-storage 5 \
+  --db-instance-class db.t1.micro \
+  --engine postgres \
+  --engine-version 9.4.1 \
+  --master-username tatavo \
+  --master-user-password gYWGvupc77Vvfx \
+  --backup-retention-period 5 \
+  --profile tatavo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
